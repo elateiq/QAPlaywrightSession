@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Orion Shop: cart</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header><h1>Orion Shop</h1><nav><a href="/">Track an order</a><a href="/cart">Cart</a></nav></header>
+<main>
+  <h2>Your cart</h2>
+  <div class="card">
+    <label for="cart-total">Cart value (Rs)</label>
+    <input id="cart-total" type="number" min="1" value="1000">
+    <p>
+      <label for="code">Discount code</label>
+      <input id="code" placeholder="SAVE10">
+      <button id="apply" type="button">Apply code</button>
+    </p>
+    <p id="code-message" role="status"></p>
+    <p>Total to pay: <strong id="total">Rs 1000</strong></p>
+    <button id="pay-now" type="button">Pay now</button>
+  </div>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+$("cart-total").addEventListener("input", () => { $("total").textContent = `Rs ${Number($("cart-total").value)}`; $("code-message").textContent = ""; });
+$("apply").addEventListener("click", async () => {
+  const cart = Number($("cart-total").value);
+  const r = await fetch("/api/discount", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ cart, code: $("code").value }) });
+  const d = await r.json();
+  $("code-message").textContent = d.message;
+  $("code-message").className = d.ok ? "" : "error";
+  $("total").textContent = `Rs ${d.ok ? d.total : cart}`;
+});
+$("pay-now").addEventListener("click", () => { $("code-message").textContent = "Payment is switched off in this training shop."; });
+</script>
+</body>
+</html>

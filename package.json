@@ -1,0 +1,12 @@
+{
+  "name": "ai-qa-assistant",
+  "private": true,
+  "scripts": {
+    "shop": "node shop-app/server.js",
+    "test": "playwright test",
+    "n8n": "n8n start"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0"
+  }
+}

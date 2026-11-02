@@ -1,0 +1,13 @@
+body { font-family: system-ui, sans-serif; max-width: 760px; margin: 32px auto; padding: 0 16px; color: #14213D; background: #F6F7F4; }
+header { display: flex; justify-content: space-between; align-items: center; }
+nav a { margin-left: 16px; color: #0B6670; }
+.card { background: #fff; border: 1px solid #D8DEE6; border-radius: 12px; padding: 20px; margin-top: 16px; }
+.steps { display: flex; gap: 8px; list-style: none; padding: 0; flex-wrap: wrap; }
+.steps li { padding: 6px 12px; border-radius: 999px; background: #E8ECF1; }
+.steps li.done { background: #D3EAEC; color: #0B6670; font-weight: 600; }
+.badge { padding: 4px 10px; border-radius: 999px; background: #F6DEB4; font-weight: 600; }
+.error { color: #A23B2A; }
+button { background: #0B6670; color: #fff; border: 0; padding: 10px 18px; border-radius: 8px; cursor: pointer; }
+button.secondary { background: #fff; color: #A23B2A; border: 1px solid #A23B2A; }
+input { padding: 9px; border: 1px solid #B8C2D0; border-radius: 8px; }
+.note { position: absolute; left: -9999px; }

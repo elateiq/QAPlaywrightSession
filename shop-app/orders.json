@@ -1,0 +1,8 @@
+[
+  {"id": "ORD-1001", "customer": "A. Iyer", "status": "Delivered", "placed": "2026-10-01", "promised": "2026-10-05", "delivered": "2026-10-04", "courier": "BlueDart", "tracking": "BD123456"},
+  {"id": "ORD-1002", "customer": "M. Nair", "status": "Shipped", "placed": "2026-10-20", "promised": "2026-10-26", "delivered": null, "courier": "Delhivery", "tracking": "DL778899"},
+  {"id": "ORD-1003", "customer": "R. Kumar", "status": "Packed", "placed": "2026-10-27", "promised": "2026-11-02", "delivered": null, "courier": null, "tracking": null},
+  {"id": "ORD-1004", "customer": "D. Rao", "status": "Out for delivery", "placed": "2026-10-22", "promised": "2026-10-24", "delivered": null, "courier": "BlueDart", "tracking": "BD654321"},
+  {"id": "ORD-1005", "customer": "K. Menon", "status": "Delivered", "placed": "2026-10-10", "promised": "2026-10-14", "delivered": "2026-10-16", "courier": "Ekart", "tracking": "EK112233"},
+  {"id": "ORD-1006", "customer": "S. Das", "status": "Placed", "placed": "2026-10-28", "promised": "2026-11-04", "delivered": null, "courier": null, "tracking": null}
+]
